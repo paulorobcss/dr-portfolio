@@ -1,0 +1,283 @@
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #918da7;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+}
+
+* {
+    margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: var(--body-bg-color);
+
+    color: var(--text-color);
+}
+
+body {
+    margin: 8px;
+    padding: 3em;
+    display: flex;
+}
+
+/* ? aside */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+aside div, main .myProjects, main .project, main .myProjects .title, main .myProjects a, aside .links img, aside .technologies ul, aside .technologies li, main .myPosts, main .post {
+    background-color: var(--bg-cards);
+}
+
+aside .profile, aside .links, aside .technologies,aside .experiences, aside .educations, main .myProjects, main .project, main .myPosts, main .post { /* ! Adicionar os quadros novos aqui */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+aside .profile {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    align-items: center;
+}
+
+aside .profile img {
+    border-radius: 50%;
+    border: 2px solid greenyellow;
+    width: 128px;
+}
+
+aside .profile .name {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+aside .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+aside .links div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+aside .links a {
+    text-decoration: none;
+    background-color: var(--bg-cards);
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+aside .links .notFirstLink {
+    margin-top: 10px;
+}
+
+aside .links .email {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* ? Tecnologias */
+aside .technologies .title {
+    font-weight: 500;
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+aside .technologies ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    padding: 0 1rem;
+
+    margin-top: 15px;
+
+    justify-content: space-between;
+}
+
+aside .technologies ul li {
+    background-color: var(--bg-techs);
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+
+    width: 85px;
+    height: 25px;
+
+    text-align: center;
+
+    padding-top: 12px;
+
+    border-radius: 30px;
+}
+
+/* ? Experiências e Educação*/
+aside .experiences .title, aside .educations .title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+aside .experiences ul, aside .experiences li, aside .experiences p, aside .educations ul, aside .educations li, aside .educations p {
+    background-color: var(--bg-cards);
+}
+
+aside .experiences ul, aside .educations ul {
+    margin-bottom: 5px;
+}
+
+aside .experiences li, aside .educations li {
+    margin-top: 15px;
+}
+
+aside .experiences p, aside .educations p {
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* ? main */
+main {
+    flex: 3;
+    margin-left: 60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .myProjects {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .myProjects .title, main .myPosts .title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+main .projects {
+    display: flex;
+    gap: 30px;
+}
+
+main .projects .project {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .projects .project img, main .projects .project div {
+    background-color: var(--bg-cards);
+}
+
+main .projects .project .projectHeader {
+    display: flex;
+    gap: 16px;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+main .projects .project img {
+    width: 20px;
+    height: 20px;
+}
+
+main .projects .project .projectGitInfo, main .projects .project .projectInfo, main .projects .project .projectInfo .stars, main .projects .project .projectInfo .branches {
+    display: flex;
+}
+
+main .projects .project .projectGitInfo {
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+main .projects .project .mainLanguage {
+    display: flex;
+    gap: 8px;
+    
+    align-items: center;
+}
+
+main .projects .project .coloredDot {
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+
+    border-radius: 50%;
+}
+
+main .projects .project .projectInfo {
+    gap: 16px;
+}
+
+main .projects .project .projectInfo .stars, main .projects .project .projectInfo .branches {
+    gap: 8px;
+}
+
+/* ? Posts */
+main .myPosts .title {
+    background-color: var(--bg-cards);
+}
+
+main .post div, main .post p {
+    background-color: var(--bg-cards);
+}
+
+main .post {
+    display: flex;
+    gap: 20px;
+}
+
+main .post .profilePic img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+main .post .postContent {
+    display: flex;
+    flex-direction: column;
+}
+
+main .post .postContent .title {
+    font-weight: 700;
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+main .post .postContent .postDate {
+    font-weight: 400;
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+main .post .postContent .postDescription {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+main .post .postContent .hashtags {
+    display: flex;
+    margin-top: 11px;
+
+    font-weight: 400;
+    font-size: 14px;
+
+    gap: 10px;
+}
