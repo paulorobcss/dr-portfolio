@@ -36,7 +36,7 @@ aside .profile, aside .links, aside .technologies,aside .experiences, aside .edu
     border-radius: 8px;
 }
 
-aside .profile {
+aside .profile, aside .profile .informations {
     display: flex;
     flex-direction: column;
 
@@ -48,6 +48,10 @@ aside .profile img {
     border-radius: 50%;
     border: 2px solid greenyellow;
     width: 128px;
+}
+
+aside .profile .informations {
+    gap: 5px;
 }
 
 aside .profile .name {
@@ -99,6 +103,8 @@ aside .technologies ul {
     padding: 0 1rem;
 
     margin-top: 15px;
+
+    gap: 8px;
 
     justify-content: space-between;
 }
@@ -280,4 +286,121 @@ main .post .postContent .hashtags {
     font-size: 14px;
 
     gap: 10px;
+}
+
+/* ? Tornando o site responsivo */
+@media (max-width: 1250px) {
+    /* body {
+        background-color: white;
+    } */
+
+    main .projects .project .projectGitInfo {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1095px) {
+    body {
+        /* background-color: yellow; */
+        padding: 0;
+    }
+
+    main {
+        margin-left: 10px;
+        flex: 4;
+    }
+
+    aside, main, main .projects {
+        gap: 10px;
+    }
+
+    aside .profile, aside .links, aside .technologies, aside .experiences, aside .educations, main .myProjects, main .project, main .myPosts, main .post {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 875px) {
+    body {
+        /* background-color: aqua; */
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    aside .profile {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 3rem;
+    }
+
+    aside .profile img {
+        width: 64px;
+    }
+
+    aside .profile .informations {
+        align-items: flex-start;
+    }
+
+    aside .profile .name {
+        font-size: 18px;
+    }
+
+    aside .profile .jobTitle {
+        font-size: 12px;
+    }
+
+    aside .links {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 30px 14px 30px;
+    }
+
+    aside .links div {
+        gap: 8px;
+    }
+
+    aside .technologies, aside .experiences, aside .educations {
+        padding: 20px;
+    }
+
+    aside .technologies {
+        display: flex;
+        align-items: center;
+    }
+
+    aside .technologies .title {
+        margin-bottom: 0;
+    }
+
+    aside .technologies .listOfTechnologies {
+        display: flex;
+        line-height: 37px;
+    }
+
+    aside .technologies ul {
+        margin-top: 0;
+        margin-left: 60px;
+        padding: 0;
+        gap: 60px;
+    }
+
+    aside .experiences, aside .educations {
+        display: flex;
+        align-items: center;
+    }
+
+    aside .experiences ul, aside .educations ul {
+        display: flex;
+        gap: 5vw;
+        list-style: none;
+    }
+
+    main {
+        margin-left: 0;
+        padding-top: 20px;
+    }
 }
